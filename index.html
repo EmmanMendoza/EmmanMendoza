@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/d13015536b.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo (2).png " class="logo">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">PORTFOLIO</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                </ul>
+            </nav>
+            <div class="details">
+                <p>Web Developer</p> 
+                <h1>Hi! I'm <span>Emmanuel</span><br>Mendoza</h1>
+            </div>
+            <div class="images">
+                <img src="images/shape.png" class="shape">
+                <img src="images/emman1.png" class="emman">
+            </div>
+        </div>
+    </div>
+<!-------------About-------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/my-profile.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p> I am Emmanuel Servillon Mendoza, a freelance Web Developer 
+                        aspiring a particular goal-- to meet my client's demand.
+                        I am willing to do commission-based projects, graphic designing,
+                        UX/UI web designing, and develop a website. You can also hire me
+                        to your prestigious company, either J.O., part-time, or full-time 
+                        and permanent work.
+                    </p>
+                    <div class="tabtitles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/ Web App interfaces</li>
+                            <li><span>Web Development</span><br>Develop Websites</li>
+                            <li><span>Web App Development</span><br>Build Android Web App</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022-Current</span><br>Assistant Surveyor</li>
+                            <li><span>2021</span><br>UX/UI Developer</li>
+                            <li><span>2020</span><br>CAD Operator</li>
+                            <li><span>2018-2019</span><br>Law Office Secretary</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2018</span><br>BSIT Returnee at USTP.</li>
+                            <li><span>2014</span><br>BSIT at USTP.</li>
+                            <li><span>2013</span><br>Electrical Engineering at USTP.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ------------------Services----------------- -->
+
+<div id="services">
+    <div class="container">
+        <h1 class="subtitle">My Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Web Design</h2>
+                <p> Some key importants of web designing is to improve search visibility
+                    and user-cenric design while achieving the business goals. </p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <h2>UX/UI Design</h2>
+                <p> It is based on a user-centric or product-centric design that can
+                    ensure the user a smooth and interactive software design. </p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <h2>Web App Design</h2>
+                <p> An interactive website application that can be accessible through your
+                    website app in your phone. A handy CRUD application for you.
+                </p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        var tablinks= document.getElementsByClassName("tab-links");
+        var tabcontents= document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tabLink of tablinks){
+                tabLink.classList.remove("active-link");
+            }
+            for(tabContent of tabcontents){
+                tabContent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
